@@ -1,0 +1,9 @@
+services:
+  telegram-role-bot:
+    build: .
+    container_name: telegram-role-bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=???
+    volumes:
+      - ./db:/app/db
+    restart: unless-stopped
